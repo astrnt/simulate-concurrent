@@ -1,8 +1,18 @@
-Build the Docker image (image name: 'rp'):
-`docker build -t rp .`
+<!-- To run the Selenium standalone chrome
+
+`docker run -d -p 4444:4444 -v /dev/shm:/dev/shm selenium/standalone-chrome`
+---
+
+Build the Docker image (image name: 'selchrompy'):
+
+`docker build -t selchrompy .`
 
 Create the container and run the scripts inside the container:
-`docker run --rm -v <your workspace>/selenium-test-basic:/app rp python /app/app.py`
+
+`docker run --rm -v <your workspace>/selenium-test-basic:/app selchrompy python /app/app.py`
 
 Example:
-`docker run --rm -v ~/Workspace/astronaut_research/simulate-concurrent/selenium-scripts:/app rp python /app/app.py`
+
+`docker run --rm -v ~/Workspace/astronaut_research/simulate-concurrent/selenium-scripts:/app selchrompy python /app/app.py` -->
+
+`docker-compose up --build --abort-on-container-exit`
